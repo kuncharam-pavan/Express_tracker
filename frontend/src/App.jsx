@@ -1,5 +1,5 @@
 import "../src/App.css"
-import Home from "./pages/Dashboard/userDashboard/Home"
+import Home from "./pages/Dashboard/Home"
 import Expense from "./component/Expense/Expense"
 import Income from "./component/Income/Income"
 import Nav from "./component/Nav/Nav"
