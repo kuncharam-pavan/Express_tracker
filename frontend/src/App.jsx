@@ -18,6 +18,7 @@ function App() {
         const saveTransData = localStorage.getItem("income")
         return saveTransData ? JSON.parse(saveTransData) : []
       })
+console.log("checking");
 
       useEffect(()=>{
         localStorage.setItem(

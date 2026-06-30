@@ -15,6 +15,7 @@ const Home = ({ expenseAllTrans = [], incomeAllTrans=[] }) => {
   }, 0);
 
   const balance = totalIncome - totalExpense;
+  
 function btnFun(){
   navigate("/Login")
 }
