@@ -42,6 +42,10 @@ const Signup = () => {
           }
           catch (error) {
             console.log(error);
+            if(!error.response){
+              alert(error.message)
+              return
+            }
                if(error.response.data.errors){
                   alert(
                       error.response.data.errors[0].msg
