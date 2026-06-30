@@ -19,10 +19,10 @@ const Signup = () => {
             return // this return for not to execute function further 
             // when alert raise the previous data will not be removed
           }
-
+          const API = "https://express-tracker-backend-9qkt.onrender.com"
          try {
               const response = await axios.post(
-                "http://localhost:3000/users/signup",
+                `${API}/users/signup`,
                 {
                   name:name,
                   email:email,
