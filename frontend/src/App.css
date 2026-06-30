@@ -1,0 +1,23 @@
+.parent{
+    display: flex;
+}
+
+
+.child1{
+border: 2px solid black;
+width:20%;
+background-color:#0F172A;
+padding-top: 200px;
+}
+
+.Appchild2{
+    width:80%;
+    padding:20px;
+    border:2px solid black;
+}
+
+.fullpage{
+    width:100%;
+    padding:20px;
+    border:none;
+}

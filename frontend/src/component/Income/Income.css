@@ -1,0 +1,52 @@
+.incomeForm{
+    margin-top: 160px;
+    border: 2px solid;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    margin-left: 400px;
+    font-size: 20px;
+}
+
+.incomeForm button{
+    width: 80px;
+    height: 30px;
+}
+
+.incomeTable{
+    margin-top: 80px;
+     width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    overflow:hidden;
+
+    border:2px solid #CBD5E1;
+    border-radius:18px;
+
+    background-color:white;
+
+    box-shadow:0px 4px 12px rgba(0,0,0,0.08)
+}
+
+th{
+     background-color:#1E3A5F;
+    color:white;
+
+    padding:18px;
+    font-size:18px;
+    text-align:center;
+}
+td{
+    padding:16px;
+    text-align:center;
+
+    border-top:1px solid #E2E8F0;
+
+    font-size:16px;
+    color:#334155;
+}
+
+
+.incomeMainParentDiv{
+       height: 750px;
+}
