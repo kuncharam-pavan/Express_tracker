@@ -36,8 +36,9 @@ async function handleSubmit(e){
   e.preventDefault()
   try {
     const token = localStorage.getItem("token")
+     const Api = "https://express-tracker-backend-9qkt.onrender.com"
     const response  = await axios.post(
-      "http://localhost:3000/trans/addtrans",
+      `${Api}/trans/addtrans`,
       {
         title:transaction,
         amount:amount
@@ -65,8 +66,9 @@ async function handleSubmit(e){
   async function fetchData(){
     try {
           const token = localStorage.getItem("token")
+           const Api = "https://express-tracker-backend-9qkt.onrender.com"
         const response = await axios.get(
-              "http://localhost:3000/trans/alltrans",
+              `${Api}/trans/alltrans`,
             {
           headers:{
             Authorization:`Bearer ${token}`
@@ -84,8 +86,9 @@ async function handleSubmit(e){
   async function deleteFun(id){
     try {
       const token =  localStorage.getItem("token")
+       const Api = "https://express-tracker-backend-9qkt.onrender.com"
       const response = await axios.delete(
-        `http://localhost:3000/trans/deletetrans/${id}`,
+        `${Api}/trans/deletetrans/${id}`,
         {
           headers:{
                     Authorization:`Bearer ${token}`

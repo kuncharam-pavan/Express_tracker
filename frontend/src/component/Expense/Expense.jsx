@@ -6,35 +6,7 @@ const Expense = ({expenseAllTrans =[] ,expenseSetAllTrans = []}) => {
     // console.log("expenseSetAllTrans:", expenseSetAllTrans);
 const [transaction ,setTransaction] = useState("")
 const [amount ,setAmount] = useState("")
-// const [expencesalltrans ,expencessetalltrans] = useState([]) // expencesalltrans   setalltrans==> expencessetalltrans
 
-
-// this for check with only frontend
-// async function handlesubmit(e){
-//       e.preventDefault()
-
-//       const newtrans ={id:Date.now(),transaction,amount}
-//       // expencessetalltrans([...expencesalltrans,newtrans]);
-//       expencessetalltrans([...expencesalltrans,newtrans])
-//       settransaction("")
-//      
-//       setamount("")
-//       }
-
-//       function deletefun(id){
-//             const filterdata = expencesalltrans.filter((item)=>
-//               item.id !== id
-//             )
-//             expencessetalltrans(filterdata)
-
-//       }
-
-//     useEffect(()=>{
-//       console.log(expencesalltrans);
-//     },[expencesalltrans])
-
-
-// added to the backend
 async function deleteFun(id){
 
     try {
@@ -42,8 +14,8 @@ async function deleteFun(id){
         const token = localStorage.getItem("token")
 
         const response = await axios.delete(
-
-            `http://localhost:3000/trans/deletetrans/${id}`,
+            `https://express-tracker-backend-9qkt.onrender.com/${id}`,
+            // `http://localhost:3000/trans/deletetrans/${id}`,
 
             {
                 headers:{
@@ -74,10 +46,10 @@ async function handleSubmit(e){
     try {
 
         const token = localStorage.getItem("token")
-
+        const Api = "https://express-tracker-backend-9qkt.onrender.com"
         const response = await axios.post(
 
-            "http://localhost:3000/trans/addtrans",
+            `${Api}/trans/addtrans`,
 
             {
                 title:transaction,
@@ -112,8 +84,9 @@ async function handleSubmit(e){
 async function fetchData(){
       try {
           const token = localStorage.getItem("token")
+          const Api = "https://express-tracker-backend-9qkt.onrender.com"
           const response = await axios.get(
-            "http://localhost:3000/trans/alltrans",
+            `${Api}/trans/alltrans`,
             {
               headers:{
                     Authorization:`Bearer ${token}`
